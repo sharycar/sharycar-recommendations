@@ -1,0 +1,5 @@
+.idea/
+sharycar-recommendations.iml
+sharycar-recommendations-api/target/classes/lib/jetty-alpn-java-server-9.4.11.v20180605.jar
+sharycar-recommendations-api/target/
+sharycar-recommendations-persistence/target/

@@ -1,0 +1,44 @@
+kumuluzee:
+  name: catalogue-service
+  env:
+    name: dev
+  version: 1.0.0
+  server:
+    http:
+      port: 8082
+  datasources:
+  - jndi-name: jdbc/SharyCarDB
+    connection-url: jdbc:postgresql://sharycardb.czqdzv4vbdko.eu-west-1.rds.amazonaws.com:5432/postgres
+    username: postgres
+    password: postgres
+    max-pool-size: 20
+  health:
+    servlet:
+      mapping: /health
+      enabled: true
+    logs:
+      enabled: true
+      level: FINE
+      period-s: 60
+    checks:
+      data-source-health-check:
+        jndi-name: jdbc/SharyCarDB
+      disk-space-health-check:
+        threshold: 100000000
+  discovery:
+    etcd:
+      hosts: http://etcd:2379
+  config:
+    etcd:
+      hosts: http://etcd:2379
+  metrics:
+    logstash:
+      enabled: false
+    web-instrumentation:
+    - name: metricsEndpoint
+      url-pattern: /metrics/*
+
+
+rest-config:
+  payment-currency: EUR
+  reservation-value: 2
