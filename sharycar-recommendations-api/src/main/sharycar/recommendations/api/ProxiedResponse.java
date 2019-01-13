@@ -1,4 +1,4 @@
-package sharycar.catalogue.api;
+package sharycar.recommendations.api;
 
 public class ProxiedResponse {
 

@@ -1,4 +1,4 @@
-package sharycar.catalogue.api;
+package sharycar.recommendations.api;
 
 
 /**
@@ -12,5 +12,5 @@ import javax.ws.rs.core.Application;
 
 @RegisterService
 @ApplicationPath("/")
-public class CatalogueApplication extends Application{
+public class RecommendationsApplication extends Application{
 }

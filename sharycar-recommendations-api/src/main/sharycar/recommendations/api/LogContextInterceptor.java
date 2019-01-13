@@ -1,4 +1,4 @@
-package sharycar.catalogue.api;
+package sharycar.recommendations.api;
 
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
